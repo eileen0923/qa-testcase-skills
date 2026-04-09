@@ -29,6 +29,8 @@ git clone <repo-url> qa-testcase-generator
     ├── README.md
     ├── generate-xmind.py
     ├── qa-design-methods.md
+    ├── feature-backgrounds/
+    │   └── payment-rules.md
     └── project-backgrounds/
         └── README.md
 ```
@@ -39,9 +41,10 @@ git clone <repo-url> qa-testcase-generator
 |---|---|
 | `SKILL.md` | Skill 主體：Claude Code 讀取的執行指令，包含 KKday 通用業務知識（訂單狀態機、平台差異、BE2 等）、QA 格式規範（Priority、TC 撰寫規則）、XMind XML 結構範本 |
 | `qa-design-methods.md` | 測試方法論參考文件：等價劃分、邊界值分析、狀態轉換、決策表、錯誤猜測法，各附 KKday 情境範例 |
-| `generate-xmind.py` | 打包腳本：將 `content.xml` 壓縮為 `.xmind` 檔案，支援嵌入 Figma 截圖 |
+| `generate-xmind.py` | xml 轉 xmind 格式腳本：將 `content.xml` 壓縮為 `.xmind` 檔案，支援嵌入 Figma 截圖 |
 | `README.md` | 本檔案：安裝說明、使用方式、各檔案角色說明 |
-| `project-backgrounds/` | 功能級別的專屬業務知識（如：改期規則、訂單明細頁現有 UI），由使用者自行新增，每次遇到相同功能的 PRD 時自動載入；詳見目錄內的 `README.md` |
+| `feature-backgrounds/` | 功能域層級的通用業務知識（如：金流 / repay 頁行為），由 skill 維護者管理；偵測到 PRD 含對應關鍵字時自動載入，無需使用者手動操作 |
+| `project-backgrounds/` | 專案特定的既有業務知識（如：改期規則、訂單明細頁現有 UI），由使用者自行新增，每次遇到相同功能的 PRD 時自動載入；詳見目錄內的 `README.md` |
 
 > **其他 Squad 也能用**：`SKILL.md` 與 `qa-design-methods.md` 的規則適用於 KKday 任何產品線。只需將角色描述第一行的 Squad 名稱改掉，並在 `project-backgrounds/` 放入自己 squad 的功能背景知識即可。
 
