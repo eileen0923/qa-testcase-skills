@@ -56,13 +56,15 @@ git clone <repo-url> qa-testcase-generator
 /qa-testcase-generator /path/to/prd.pdf
 ```
 
-呼叫時可附上補充說明（優先層級最高，整個執行過程都會套用）：
+> **Tip**：不用手動輸入路徑——直接把 PDF 檔案拖曳到 Claude Code 對話框，路徑會自動帶入。
+
+呼叫時可在路徑後附上補充說明，優先層級最高，整個執行過程都會套用：
 
 ```
 /qa-testcase-generator /path/to/prd.pdf 這次只測 Phase 1，忽略付款流程
 ```
 
-或直接輸入指令，再貼上 PRD 文字：
+或直接輸入指令，再貼上 PRD 文字內容：
 
 ```
 /qa-testcase-generator
