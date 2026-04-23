@@ -50,7 +50,7 @@ git clone <repo-url> qa-testcase-generator
 
 ## 使用方式
 
-在 Claude Code 對話中輸入：
+在 Claude Code 對話中輸入指令，後面附上 prd (pdf 檔案) 的路徑：
 
 ```
 /qa-testcase-generator /path/to/prd.pdf
